@@ -31,7 +31,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1.4, ease: 'easeOut' }}
-          className="text-4xl md:text-7xl"
+          className="text-5xl md:text-7xl leading-tight"
           style={{ fontFamily: 'SymphonyPro, cursive' }}
         >
           Barbare & Levan
