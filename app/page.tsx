@@ -56,7 +56,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isOpening ? { opacity: 0, y: -20 } : { opacity: 1, scale: 1 }}
           transition={{ duration: isOpening ? 0.5 : 1, delay: isOpening ? 0.1 : 1.4, ease: 'easeOut' }}
-          className="pt-4 overflow-visible whitespace-nowrap"
+          className="pt-4 overflow-visible whitespace-nowrap pl-[5px] md:pl-0"
           style={{ fontFamily: 'SymphonyPro, cursive', fontSize: 'clamp(48px, 12vw, 120px)' }}
         >
           Barbare & Levan
