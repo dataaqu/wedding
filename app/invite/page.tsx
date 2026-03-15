@@ -78,7 +78,7 @@ export default function InvitePage() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 3.5, ease: 'easeOut' }}
-            className="absolute left-[-10%] top-[5%] w-[95%] md:w-[85%] z-40 will-change-transform"
+            className="absolute left-[-20%] top-[5%] w-[95%] md:w-[85%] z-40 will-change-transform"
           >
             <Image
               src="/assets/images/heart.png"
@@ -94,7 +94,7 @@ export default function InvitePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 4, ease: 'easeOut' }}
-            className="absolute right-[25%] md:right-[20%] top-[25%] md:top-[10%] w-[28%] md:w-[22%] z-30 will-change-transform"
+            className="absolute right-[25%] md:right-[20%] top-[14%] md:top-[10%] w-[28%] md:w-[22%] z-20 will-change-transform"
           >
             <Image
               src="/assets/images/cupid_2.webp"
@@ -110,7 +110,7 @@ export default function InvitePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 4.5, ease: 'easeOut' }}
-            className="absolute right-[12%] top-[30%] w-[22%] md:w-[15%] z-30 rotate-[10deg] will-change-transform"
+            className="absolute right-[12%] top-[38%] w-[18%] md:w-[12%] z-30 rotate-[10deg] will-change-transform"
           >
             <Image
               src="/assets/images/dining_element_2.png"
@@ -126,7 +126,7 @@ export default function InvitePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 5, ease: 'easeOut' }}
-            className="absolute left-[70%] top-[60%] w-[16%] md:w-[10%] z-30 will-change-transform"
+            className="absolute left-[48%] top-[50%] w-[16%] md:w-[10%] z-30 will-change-transform"
           >
             <Image
               src="/assets/images/decoration_1.png"
@@ -142,7 +142,7 @@ export default function InvitePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 5.5, ease: 'easeOut' }}
-            className="absolute right-[15%] top-[75%] w-[22%] md:w-[15%] z-30 will-change-transform"
+            className="absolute right-[8%] top-[75%] w-[22%] md:w-[15%] z-30 will-change-transform"
           >
             <Image
               src="/assets/images/dining_1.webp"
