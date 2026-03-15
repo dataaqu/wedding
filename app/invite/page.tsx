@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export default function InvitePage() {
   return (
     <main className="min-h-svh flex items-center justify-center px-4 py-8 text-center text-black">
-      <div className="flex flex-col items-center w-full max-w-[700px] mt-20">
+      <div className="flex flex-col items-center w-full max-w-[700px] mt-8">
         {/* Envelope with invite on top */}
         <div className="relative w-[70vw] max-w-[600px]">
           <motion.div
@@ -56,7 +56,7 @@ export default function InvitePage() {
         </div>
 
         {/* Row 2 - scattered elements */}
-        <div className="relative w-full -mt-56 md:-mt-72" style={{ height: '90vw', maxHeight: '600px' }}>
+        <div className="relative w-full -mt-44 md:-mt-72" style={{ height: '90vw', maxHeight: '600px' }}>
           {/* 1. decoration_2 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
