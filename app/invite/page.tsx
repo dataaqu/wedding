@@ -78,9 +78,9 @@ export default function InvitePage() {
           {t('invite.timeline')}
         </p>
 
-        <a href="https://maps.app.goo.gl/X13TxE2B86TScNXB9" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity animate-fadeIn" style={{ animationDelay: '6.5s' }}>
+        <a href="https://maps.app.goo.gl/X13TxE2B86TScNXB9" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center cursor-pointer hover:opacity-80 transition-opacity animate-fadeIn" style={{ animationDelay: '6.5s' }}>
           <div className="w-[50vw] md:w-[70vw] max-w-[400px] mt-8 cursor-pointer">
-            <Image src="/assets/images/venues_and_churches_PNG-02.webp" alt="Venue" width={600} height={600} className="w-full h-auto ml-5 md:ml-0" />
+            <Image src="/assets/images/venues_and_churches_PNG-02.webp" alt="Venue" width={600} height={600} className="w-full h-auto" />
           </div>
           <p className="text-sm md:text-lg tracking-[0.15em] uppercase mt-6 text-center cursor-pointer" style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 500 }}>
             {t('invite.church')}
@@ -90,9 +90,9 @@ export default function InvitePage() {
           </p>
         </a>
 
-        <a href="https://maps.app.goo.gl/BmRWXAWvZ2dVHpQW8" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity animate-fadeIn" style={{ animationDelay: '7s' }}>
+        <a href="https://maps.app.goo.gl/BmRWXAWvZ2dVHpQW8" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center cursor-pointer hover:opacity-80 transition-opacity animate-fadeIn" style={{ animationDelay: '7s' }}>
           <div className="w-[50vw] md:w-[70vw] max-w-[400px] mt-16 cursor-pointer">
-            <Image src="/assets/images/dining_element_PNG-58.png" alt="Dining venue" width={600} height={600} className="w-full h-auto ml-5 md:ml-0" />
+            <Image src="/assets/images/dining_element_PNG-58.png" alt="Dining venue" width={600} height={600} className="w-full h-auto" />
           </div>
           <p className="text-sm md:text-lg tracking-[0.15em] uppercase mt-6 text-center cursor-pointer" style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 500 }}>
             {t('invite.signing')}
@@ -102,7 +102,7 @@ export default function InvitePage() {
           </p>
         </a>
 
-        <a href="https://maps.app.goo.gl/BmRWXAWvZ2dVHpQW8" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity animate-fadeIn" style={{ animationDelay: '7.5s' }}>
+        <a href="https://maps.app.goo.gl/BmRWXAWvZ2dVHpQW8" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center cursor-pointer hover:opacity-80 transition-opacity animate-fadeIn" style={{ animationDelay: '7.5s' }}>
           <div className="w-[50vw] md:w-[70vw] max-w-[400px] mt-16 cursor-pointer">
             <Image src="/assets/images/table_setting_PNG-02.webp" alt="Wedding reception" width={600} height={600} className="w-full h-auto" />
           </div>
