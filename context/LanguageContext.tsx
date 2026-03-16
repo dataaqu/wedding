@@ -86,13 +86,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return images[lang][key] ?? images['ka'][key] ?? ''
   }
 
-  if (!mounted) {
-    return null
-  }
-
   return (
     <LanguageContext.Provider value={{ lang, setLang, t, getImage }}>
-      {children}
+      <div style={{ visibility: mounted ? 'visible' : 'hidden' }}>
+        {children}
+      </div>
     </LanguageContext.Provider>
   )
 }
