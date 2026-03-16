@@ -2,8 +2,11 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function InvitePage() {
+  const { getImage } = useLanguage()
+
   return (
     <main className="min-h-svh flex items-center justify-center px-4 py-8 text-center text-black">
       <div className="flex flex-col items-center w-full max-w-[700px] mt-8">
@@ -16,7 +19,7 @@ export default function InvitePage() {
             className="absolute left-[69%] -translate-x-1/2 -top-[35%] w-[100%] z-10 will-change-transform"
           >
             <Image
-              src="/assets/images/png invite.png"
+              src={getImage('invite')}
               alt="Invite"
               width={800}
               height={800}
@@ -81,7 +84,7 @@ export default function InvitePage() {
             className="absolute left-[-20%] top-[5%] w-[95%] md:w-[85%] z-40 will-change-transform"
           >
             <Image
-              src="/assets/images/heart.png"
+              src={getImage('heart')}
               alt="Details heart"
               width={600}
               height={600}
@@ -153,6 +156,153 @@ export default function InvitePage() {
             />
           </motion.div>
         </div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 6, ease: 'easeOut' }}
+          className="text-5xl md:text-6xl text-center mt-20"
+          style={{ fontFamily: 'SymphonyPro, cursive' }}
+        >
+          Our wedding timeline
+        </motion.p>
+
+        <a href="https://maps.app.goo.gl/X13TxE2B86TScNXB9" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 6.5, ease: 'easeOut' }}
+            className="w-[50vw] md:w-[70vw] max-w-[400px] mt-8 cursor-pointer"
+          >
+            <Image
+              src="/assets/images/venues_and_churches_PNG-02.webp"
+              alt="Venue"
+              width={600}
+              height={600}
+              className="w-full h-auto ml-5"
+            />
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 7, ease: 'easeOut' }}
+            className="text-sm md:text-lg tracking-[0.15em] uppercase mt-6 text-center cursor-pointer"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+          >
+            Church wedding ceremony
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 7.3, ease: 'easeOut' }}
+            className="text-xs md:text-sm tracking-[0.1em] mt-2 text-center cursor-pointer"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}
+          >
+            15:00 / Svetitskhoveli Cathedral. Mtskheta.
+          </motion.p>
+        </a>
+
+        <a href="https://maps.app.goo.gl/BmRWXAWvZ2dVHpQW8" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 7.8, ease: 'easeOut' }}
+            className="w-[50vw] md:w-[70vw] max-w-[400px] mt-16 cursor-pointer"
+          >
+            <Image
+              src="/assets/images/dining_element_PNG-58.png"
+              alt="Dining venue"
+              width={600}
+              height={600}
+              className="w-full h-auto ml-5"
+            />
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 8.3, ease: 'easeOut' }}
+            className="text-sm md:text-lg tracking-[0.15em] uppercase mt-6 text-center cursor-pointer"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+          >
+            Wedding signing ceremony
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 8.6, ease: 'easeOut' }}
+            className="text-xs md:text-sm tracking-[0.1em] mt-2 text-center cursor-pointer"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}
+          >
+            17:00 / Lisi Event Hall
+          </motion.p>
+        </a>
+
+        <a href="https://maps.app.goo.gl/BmRWXAWvZ2dVHpQW8" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 9.1, ease: 'easeOut' }}
+            className="w-[50vw] md:w-[70vw] max-w-[400px] mt-16 cursor-pointer"
+          >
+            <Image
+              src="/assets/images/table_setting_PNG-02.webp"
+              alt="Wedding reception"
+              width={600}
+              height={600}
+              className="w-full h-auto"
+            />
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 9.6, ease: 'easeOut' }}
+            className="text-sm md:text-lg tracking-[0.15em] uppercase mt-6 text-center cursor-pointer"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+          >
+            Wedding reception dinner
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 9.9, ease: 'easeOut' }}
+            className="text-xs md:text-sm tracking-[0.1em] mt-2 text-center cursor-pointer"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}
+          >
+            18:00 / Lisi Event Hall
+          </motion.p>
+        </a>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 10.5, ease: 'easeOut' }}
+          className="mt-24 mb-16 flex flex-col items-center gap-3 text-center"
+        >
+          <p
+            className="text-xs md:text-sm tracking-[0.15em] uppercase"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+          >
+            We would be honored by your presence on our special day.
+          </p>
+          <p
+            className="text-xs md:text-sm tracking-[0.15em] uppercase"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+          >
+            With love,
+          </p>
+          <p
+            className="text-4xl md:text-6xl"
+            style={{ fontFamily: 'SymphonyPro, cursive' }}
+          >
+            Barbare & Levani
+          </p>
+        </motion.div>
       </div>
     </main>
   )

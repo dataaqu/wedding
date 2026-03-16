@@ -4,10 +4,12 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function LandingPage() {
   const [isOpening, setIsOpening] = useState(false)
   const router = useRouter()
+  const { t, lang } = useLanguage()
 
   const handleEnvelopeClick = () => {
     if (isOpening) return
@@ -36,9 +38,9 @@ export default function LandingPage() {
         animate={isOpening ? { opacity: 0, y: -30 } : { opacity: 1, y: 0 }}
         transition={{ duration: isOpening ? 0.6 : 1, ease: 'easeOut' }}
         className="text-[10px] md:text-xl tracking-[0.2em] md:tracking-[0.3em] uppercase mb-3 md:mb-5 max-w-[90vw]"
-        style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+        style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: lang === 'ka' ? 300 : 500 }}
       >
-        We warmly invite you to share in our happiness
+        {t('landing.subtitle')}
       </motion.p>
 
       <div className="flex flex-col items-center gap-1 md:gap-2 w-full">
@@ -47,9 +49,9 @@ export default function LandingPage() {
           animate={isOpening ? { opacity: 0, y: -20 } : { opacity: 1 }}
           transition={{ duration: isOpening ? 0.5 : 0.8, delay: isOpening ? 0 : 0.8, ease: 'easeOut' }}
           className="text-[8px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase"
-          style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+          style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: lang === 'ka' ? 300 : 500 }}
         >
-          You have mail from
+          {t('landing.mailFrom')}
         </motion.p>
 
         <motion.p
@@ -57,9 +59,9 @@ export default function LandingPage() {
           animate={isOpening ? { opacity: 0, y: -20 } : { opacity: 1, scale: 1 }}
           transition={{ duration: isOpening ? 0.5 : 1, delay: isOpening ? 0.1 : 1.4, ease: 'easeOut' }}
           className="pt-4 overflow-visible whitespace-nowrap pl-[5px] md:pl-0"
-          style={{ fontFamily: 'SymphonyPro, cursive', fontSize: 'clamp(48px, 12vw, 120px)' }}
+          style={{ fontFamily: lang === 'ka' ? 'Elguja, cursive' : 'SymphonyPro, cursive', fontSize: lang === 'ka' ? 'clamp(36px, 9vw, 90px)' : 'clamp(48px, 12vw, 120px)' }}
         >
-          Barbare & Levan
+          {t('landing.names')}
         </motion.p>
 
         <motion.div
@@ -94,19 +96,19 @@ export default function LandingPage() {
           animate={isOpening ? { opacity: 0, y: 20 } : { opacity: 1 }}
           transition={{ duration: isOpening ? 0.4 : 0.8, delay: isOpening ? 0 : 3.2, ease: 'easeOut' }}
           className="text-[8px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase"
-          style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+          style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: lang === 'ka' ? 300 : 500 }}
         >
-          Click envelope to open
+          {t('landing.clickEnvelope')}
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={isOpening ? { opacity: 0, y: 20 } : { opacity: 1 }}
           transition={{ duration: isOpening ? 0.4 : 0.8, delay: isOpening ? 0.1 : 3.8, ease: 'easeOut' }}
-          className="text-lg md:text-2xl"
-          style={{ fontFamily: 'SymphonyPro, cursive' }}
+          className={lang === 'ka' ? 'text-xs md:text-base' : 'text-lg md:text-2xl'}
+          style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'SymphonyPro, cursive', fontWeight: lang === 'ka' ? 300 : undefined }}
         >
-          We hope you can join us
+          {t('landing.hopeJoin')}
         </motion.p>
       </div>
     </main>

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { LanguageProvider } from '@/context/LanguageContext'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 export const metadata: Metadata = {
   title: 'Barbare & Levan ',
@@ -16,7 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ka">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          <LanguageSwitcher />
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   )
 }
