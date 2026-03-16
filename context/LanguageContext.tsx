@@ -18,6 +18,16 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.names': 'barbaresa da levanisgan',
     'landing.clickEnvelope': 'გასახსნელად დააჭირეთ კონვერტს',
     'landing.hopeJoin': 'ვიმედოვნებთ, რომ ჩვენს განსაკუთრებულ დღეს შემოგვიერთდებით',
+    'invite.timeline': 'Cveni saqorwino ganrigi',
+    'invite.church': 'ჯვრისწერის ცერემონია',
+    'invite.churchDetails': '15:00 / სვეტიცხოვლის ტაძარი. მცხეთა.',
+    'invite.signing': 'ხელმოწერის ცერემონია',
+    'invite.signingDetails': '17:00 / Lisi Event Hall',
+    'invite.dinner': 'საზეიმო ვახშამი',
+    'invite.dinnerDetails': '18:00 / Lisi Event Hall',
+    'invite.honored': 'ჩვენთვის დიდი პატივია, თუ შეძლებთ ჩვენს განსაკუთრებულ დღეს ჩვენთან ყოფნას. სიყვარულით',
+
+    'invite.names': 'barbare da levani',
   },
   en: {
     'landing.subtitle': 'We warmly invite you to share in our happiness',
@@ -25,13 +35,23 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.names': 'Barbare & Levan',
     'landing.clickEnvelope': 'Click envelope to open',
     'landing.hopeJoin': 'We hope you can join us',
+    'invite.timeline': 'Our wedding timeline',
+    'invite.church': 'Church wedding ceremony',
+    'invite.churchDetails': '15:00 / Svetitskhoveli Cathedral. Mtskheta.',
+    'invite.signing': 'Wedding signing ceremony',
+    'invite.signingDetails': '17:00 / Lisi Event Hall',
+    'invite.dinner': 'Wedding reception dinner',
+    'invite.dinnerDetails': '18:00 / Lisi Event Hall',
+    'invite.honored': 'We would be honored by your presence on our special day.',
+ 
+    'invite.names': 'Barbare & Levani',
   },
 }
 
 const images: Record<Language, Record<string, string>> = {
   ka: {
     'heart': '/assets/images/heart.png',
-    'invite': '/assets/images/png invite.png',
+    'invite': '/assets/images/qartuli.png',
   },
   en: {
     'heart': '/assets/images/heart.png',
@@ -42,7 +62,7 @@ const images: Record<Language, Record<string, string>> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Language>('ka')
+  const [lang, setLangState] = useState<Language>('en')
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {

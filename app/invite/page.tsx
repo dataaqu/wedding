@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function InvitePage() {
-  const { getImage } = useLanguage()
+  const { getImage, lang, t } = useLanguage()
 
   return (
     <main className="min-h-svh flex items-center justify-center px-4 py-8 text-center text-black">
@@ -47,14 +47,21 @@ export default function InvitePage() {
                 className="w-full h-auto"
               />
             </motion.div>
-            <Image
-              src="/assets/images/open.png"
-              alt="Open envelope"
-              width={800}
-              height={800}
-              priority
-              className="w-full h-auto"
-            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, delay: 0.5, ease: 'easeOut' }}
+              className="will-change-transform"
+            >
+              <Image
+                src="/assets/images/open.png"
+                alt="Open envelope"
+                width={800}
+                height={800}
+                priority
+                className="w-full h-auto"
+              />
+            </motion.div>
           </motion.div>
         </div>
 
@@ -162,9 +169,9 @@ export default function InvitePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 6, ease: 'easeOut' }}
           className="text-5xl md:text-6xl text-center mt-20"
-          style={{ fontFamily: 'SymphonyPro, cursive' }}
+          style={{ fontFamily: lang === 'ka' ? 'Elguja, cursive' : 'SymphonyPro, cursive' }}
         >
-          Our wedding timeline
+          {t('invite.timeline')}
         </motion.p>
 
         <a href="https://maps.app.goo.gl/X13TxE2B86TScNXB9" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
@@ -179,7 +186,7 @@ export default function InvitePage() {
               alt="Venue"
               width={600}
               height={600}
-              className="w-full h-auto ml-5"
+              className="w-full h-auto ml-5 md:ml-0"
             />
           </motion.div>
 
@@ -188,9 +195,9 @@ export default function InvitePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 7, ease: 'easeOut' }}
             className="text-sm md:text-lg tracking-[0.15em] uppercase mt-6 text-center cursor-pointer"
-            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+            style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 500 }}
           >
-            Church wedding ceremony
+            {t('invite.church')}
           </motion.p>
 
           <motion.p
@@ -198,9 +205,9 @@ export default function InvitePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 7.3, ease: 'easeOut' }}
             className="text-xs md:text-sm tracking-[0.1em] mt-2 text-center cursor-pointer"
-            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}
+            style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 300 }}
           >
-            15:00 / Svetitskhoveli Cathedral. Mtskheta.
+            {t('invite.churchDetails')}
           </motion.p>
         </a>
 
@@ -216,7 +223,7 @@ export default function InvitePage() {
               alt="Dining venue"
               width={600}
               height={600}
-              className="w-full h-auto ml-5"
+              className="w-full h-auto ml-5 md:ml-0"
             />
           </motion.div>
 
@@ -225,9 +232,9 @@ export default function InvitePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 8.3, ease: 'easeOut' }}
             className="text-sm md:text-lg tracking-[0.15em] uppercase mt-6 text-center cursor-pointer"
-            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+            style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 500 }}
           >
-            Wedding signing ceremony
+            {t('invite.signing')}
           </motion.p>
 
           <motion.p
@@ -235,9 +242,9 @@ export default function InvitePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 8.6, ease: 'easeOut' }}
             className="text-xs md:text-sm tracking-[0.1em] mt-2 text-center cursor-pointer"
-            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}
+            style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 300 }}
           >
-            17:00 / Lisi Event Hall
+            {t('invite.signingDetails')}
           </motion.p>
         </a>
 
@@ -262,9 +269,9 @@ export default function InvitePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 9.6, ease: 'easeOut' }}
             className="text-sm md:text-lg tracking-[0.15em] uppercase mt-6 text-center cursor-pointer"
-            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+            style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 500 }}
           >
-            Wedding reception dinner
+            {t('invite.dinner')}
           </motion.p>
 
           <motion.p
@@ -272,9 +279,9 @@ export default function InvitePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 9.9, ease: 'easeOut' }}
             className="text-xs md:text-sm tracking-[0.1em] mt-2 text-center cursor-pointer"
-            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}
+            style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 300 }}
           >
-            18:00 / Lisi Event Hall
+            {t('invite.dinnerDetails')}
           </motion.p>
         </a>
 
@@ -286,21 +293,15 @@ export default function InvitePage() {
         >
           <p
             className="text-xs md:text-sm tracking-[0.15em] uppercase"
-            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
+            style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 500 }}
           >
-            We would be honored by your presence on our special day.
-          </p>
-          <p
-            className="text-xs md:text-sm tracking-[0.15em] uppercase"
-            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 500 }}
-          >
-            With love,
+            {t('invite.honored')}
           </p>
           <p
             className="text-4xl md:text-6xl"
-            style={{ fontFamily: 'SymphonyPro, cursive' }}
+            style={{ fontFamily: lang === 'ka' ? 'Elguja, cursive' : 'SymphonyPro, cursive' }}
           >
-            Barbare & Levani
+            {t('invite.names')}
           </p>
         </motion.div>
       </div>
