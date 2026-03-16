@@ -26,7 +26,6 @@ const translations: Record<Language, Record<string, string>> = {
     'invite.dinner': 'საზეიმო ვახშამი',
     'invite.dinnerDetails': '18:00 / Lisi Event Hall',
     'invite.honored': 'ჩვენთვის დიდი პატივია, თუ შეძლებთ ჩვენს განსაკუთრებულ დღეს ჩვენთან ყოფნას. სიყვარულით',
-
     'invite.names': 'barbare da levani',
   },
   en: {
@@ -43,7 +42,6 @@ const translations: Record<Language, Record<string, string>> = {
     'invite.dinner': 'Wedding reception dinner',
     'invite.dinnerDetails': '18:00 / Lisi Event Hall',
     'invite.honored': 'We would be honored by your presence on our special day.',
- 
     'invite.names': 'Barbare & Levani',
   },
 }
@@ -59,21 +57,34 @@ const images: Record<Language, Record<string, string>> = {
   },
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+const LanguageContext = createContext<LanguageContextType>({
+  lang: 'en',
+  setLang: () => {},
+  t: (key: string) => translations['en'][key] ?? key,
+  getImage: (key: string) => images['en'][key] ?? '',
+})
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Language>('en')
 
   useEffect(() => {
-    const saved = localStorage.getItem('lang') as Language | null
-    if (saved === 'en' || saved === 'ka') {
-      setLangState(saved)
+    try {
+      const saved = localStorage.getItem('lang')
+      if (saved === 'en' || saved === 'ka') {
+        setLangState(saved)
+      }
+    } catch {
+      // localStorage unavailable (private browsing, etc.)
     }
   }, [])
 
   const setLang = (newLang: Language) => {
     setLangState(newLang)
-    localStorage.setItem('lang', newLang)
+    try {
+      localStorage.setItem('lang', newLang)
+    } catch {
+      // localStorage unavailable
+    }
   }
 
   const t = (key: string): string => {
@@ -81,7 +92,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }
 
   const getImage = (key: string): string => {
-    return images[lang][key] ?? images['ka'][key] ?? ''
+    return images[lang][key] ?? images['en'][key] ?? ''
   }
 
   return (
@@ -92,9 +103,5 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 }
 
 export function useLanguage() {
-  const context = useContext(LanguageContext)
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider')
-  }
-  return context
+  return useContext(LanguageContext)
 }
