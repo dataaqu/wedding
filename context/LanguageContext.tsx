@@ -63,14 +63,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Language>('en')
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     const saved = localStorage.getItem('lang') as Language | null
     if (saved === 'en' || saved === 'ka') {
       setLangState(saved)
     }
-    setMounted(true)
   }, [])
 
   const setLang = (newLang: Language) => {
@@ -88,9 +86,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   return (
     <LanguageContext.Provider value={{ lang, setLang, t, getImage }}>
-      <div style={{ visibility: mounted ? 'visible' : 'hidden' }}>
-        {children}
-      </div>
+      {children}
     </LanguageContext.Provider>
   )
 }
