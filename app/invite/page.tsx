@@ -7,7 +7,7 @@ export default function InvitePage() {
   const { getImage, lang, t } = useLanguage()
 
   return (
-    <main className="min-h-svh flex items-center justify-center px-4 py-8 text-center text-black">
+    <main className="min-h-svh flex items-center justify-center px-4 py-16 text-center text-black">
       <div className="flex flex-col items-center w-full max-w-[700px] mt-8">
         {/* Envelope with invite on top */}
         <div className="relative w-[70vw] max-w-[600px]">
@@ -58,7 +58,7 @@ export default function InvitePage() {
             <Image src={getImage('heart')} alt="Details heart" width={600} height={600} className="w-full h-auto" />
           </div>
 
-          <div className="absolute right-[14%] top-[62%] w-[20%] rotate-[5deg] animate-fadeIn" style={{ animationDelay: '3.8s', zIndex: 999 }}>
+          <div className="absolute right-[14%] top-[42%] md:top-[62%] w-[20%] rotate-[5deg] animate-fadeIn" style={{ animationDelay: '3.8s', zIndex: 999 }}>
             <Image src="/assets/images/babi levan bolo.png" alt="Babi Levan" width={600} height={600} className="w-full h-auto" />
           </div>
 
@@ -66,7 +66,7 @@ export default function InvitePage() {
             <Image src="/assets/images/cupid_2.webp" alt="Cupid" width={300} height={300} className="w-full h-auto" />
           </div>
 
-          <div className="absolute right-[12%] top-[45%] w-[15%] md:w-[12%] z-30 rotate-[10deg] animate-fadeIn" style={{ animationDelay: '4.5s' }}>
+          <div className="absolute right-[12%] top-[18%] md:top-[35%] w-[15%] md:w-[12%] z-30 rotate-[10deg] animate-fadeIn" style={{ animationDelay: '4.5s' }}>
             <Image src="/assets/images/dining_element_2.png" alt="Dining element" width={400} height={400} className="w-full h-auto" />
           </div>
 
@@ -74,13 +74,13 @@ export default function InvitePage() {
             <Image src="/assets/images/decoration_1_v2.png" alt="Decoration" width={300} height={300} className="w-full h-auto" />
           </div>
 
-          <div className="absolute right-[8%] top-[75%] w-[22%] md:w-[15%] z-30 animate-fadeIn" style={{ animationDelay: '5.5s' }}>
+          <div className="absolute right-[8%] top-[58%] md:top-[75%] w-[22%] md:w-[15%] z-30 animate-fadeIn" style={{ animationDelay: '5.5s' }}>
             <Image src="/assets/images/dining_1.webp" alt="Dining" width={300} height={300} className="w-full h-auto" />
           </div>
         </div>
 
         <p
-          className="text-5xl md:text-6xl text-center mt-20 animate-fadeIn"
+          className="text-5xl md:text-6xl text-center mt-10 animate-fadeIn"
           style={{ fontFamily: lang === 'ka' ? 'Elguja, cursive' : 'SymphonyPro, cursive', animationDelay: '6s' }}
         >
           {t('invite.timeline')}
