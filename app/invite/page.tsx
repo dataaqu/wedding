@@ -45,7 +45,7 @@ export default function InvitePage() {
         </div>
 
         {/* Row 2 - scattered elements */}
-        <div className="relative w-full -mt-44 md:-mt-72" style={{ height: '90vw', maxHeight: '600px' }}>
+        <div className="relative w-full -mt-44 md:-mt-72" style={{ height: '140vw', maxHeight: '600px' }}>
           <div className="absolute left-[5%] top-[20%] w-[28%] md:w-[20%] z-30 animate-fadeIn" style={{ animationDelay: '3s' }}>
             <Image src="/assets/images/decoration_2.png" alt="Decoration" width={300} height={300} className="w-full h-auto" />
           </div>
@@ -58,7 +58,7 @@ export default function InvitePage() {
             <Image src={getImage('heart')} alt="Details heart" width={600} height={600} className="w-full h-auto" />
           </div>
 
-          <div className="absolute right-[19%] top-[65%] w-[20%] rotate-[5deg] animate-fadeIn" style={{ animationDelay: '3.8s', zIndex: 999 }}>
+          <div className="absolute right-[14%] top-[62%] w-[20%] rotate-[5deg] animate-fadeIn" style={{ animationDelay: '3.8s', zIndex: 999 }}>
             <Image src="/assets/images/babi levan bolo.png" alt="Babi Levan" width={600} height={600} className="w-full h-auto" />
           </div>
 
@@ -66,12 +66,12 @@ export default function InvitePage() {
             <Image src="/assets/images/cupid_2.webp" alt="Cupid" width={300} height={300} className="w-full h-auto" />
           </div>
 
-          <div className="absolute right-[12%] top-[38%] w-[18%] md:w-[12%] z-30 rotate-[10deg] animate-fadeIn" style={{ animationDelay: '4.5s' }}>
+          <div className="absolute right-[12%] top-[45%] w-[15%] md:w-[12%] z-30 rotate-[10deg] animate-fadeIn" style={{ animationDelay: '4.5s' }}>
             <Image src="/assets/images/dining_element_2.png" alt="Dining element" width={400} height={400} className="w-full h-auto" />
           </div>
 
-          <div className="absolute left-[48%] top-[50%] w-[16%] md:w-[10%] z-30 animate-fadeIn" style={{ animationDelay: '5s' }}>
-            <Image src="/assets/images/decoration_1.png" alt="Decoration" width={300} height={300} className="w-full h-auto" />
+          <div className="absolute left-[48%] top-[37%] w-[28%] md:w-[25%] z-30 animate-fadeIn" style={{ animationDelay: '5s' }}>
+            <Image src="/assets/images/decoration_1_v2.png" alt="Decoration" width={300} height={300} className="w-full h-auto" />
           </div>
 
           <div className="absolute right-[8%] top-[75%] w-[22%] md:w-[15%] z-30 animate-fadeIn" style={{ animationDelay: '5.5s' }}>
