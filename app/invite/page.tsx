@@ -50,8 +50,16 @@ export default function InvitePage() {
             <Image src="/assets/images/decoration_2.png" alt="Decoration" width={300} height={300} className="w-full h-auto" />
           </div>
 
-          <div className="absolute left-[-20%] top-[5%] w-[95%] md:w-[85%] z-40 animate-fadeIn" style={{ animationDelay: '3.5s' }}>
+          <div className="absolute left-[4%] top-[42%] w-[45%] rotate-[-10deg] animate-fadeIn" style={{ animationDelay: '3.2s', zIndex: 999 }}>
+            <Image src="/assets/images/baaab.png" alt="Baaab" width={600} height={600} className="w-full h-auto" />
+          </div>
+
+          <div className="absolute left-[-20%] top-[8%] w-[95%] md:w-[85%] animate-fadeIn" style={{ animationDelay: '3.5s', zIndex: 40 }}>
             <Image src={getImage('heart')} alt="Details heart" width={600} height={600} className="w-full h-auto" />
+          </div>
+
+          <div className="absolute right-[19%] top-[65%] w-[20%] rotate-[5deg] animate-fadeIn" style={{ animationDelay: '3.8s', zIndex: 999 }}>
+            <Image src="/assets/images/babi levan bolo.png" alt="Babi Levan" width={600} height={600} className="w-full h-auto" />
           </div>
 
           <div className="absolute right-[25%] md:right-[20%] top-[14%] md:top-[10%] w-[28%] md:w-[22%] z-20 animate-fadeIn" style={{ animationDelay: '4s' }}>
