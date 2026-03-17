@@ -70,7 +70,7 @@ export default function InvitePage() {
             <Image src="/assets/images/dining_element_2.png" alt="Dining element" width={400} height={400} className="w-full h-auto" />
           </div>
 
-          <div className="absolute left-[48%] top-[37%] w-[28%] md:w-[25%] z-30 animate-fadeIn" style={{ animationDelay: '5s' }}>
+          <div className="absolute left-[45%] top-[37%] w-[28%] md:w-[35%] z-30 animate-fadeIn" style={{ animationDelay: '5s' }}>
             <Image src="/assets/images/decoration_1_v2.png" alt="Decoration" width={300} height={300} className="w-full h-auto" />
           </div>
 
