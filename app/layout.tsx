@@ -9,6 +9,23 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/fav.png',
   },
+  openGraph: {
+    title: 'Barbare & Levan',
+    description: 'We are getting married! Join us to celebrate our special day.',
+    images: [
+      {
+        url: '/assets/images/first.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Barbare & Levan',
+    description: 'We are getting married! Join us to celebrate our special day.',
+    images: ['/assets/images/first.png'],
+  },
 }
 
 export default function RootLayout({
