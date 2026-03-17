@@ -18,7 +18,7 @@ const translations: Record<Language, Record<string, string>> = {
     'landing.names': 'barbaresa da levanisgan',
     'landing.clickEnvelope': 'გასახსნელად დააჭირეთ კონვერტს',
     'landing.hopeJoin': 'ვიმედოვნებთ, რომ ჩვენს განსაკუთრებულ დღეს შემოგვიერთდებით',
-    'invite.timeline': 'Cveni saqorwino ganrigi',
+    'invite.timeline': 'Cveni saqorwilo ganrigi',
     'invite.church': 'ჯვრისწერის ცერემონია',
     'invite.churchDetails': '15:00 / სვეტიცხოვლის ტაძარი. მცხეთა.',
     'invite.signing': 'ხელმოწერის ცერემონია',
