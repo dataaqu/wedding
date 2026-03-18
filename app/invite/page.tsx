@@ -74,7 +74,7 @@ export default function InvitePage() {
         </div>
 
         <motion.p
-          className="text-5xl md:text-6xl text-center mt-10"
+          className="text-5xl md:text-6xl text-center mt-32 md:mt-10"
           style={{ fontFamily: lang === 'ka' ? 'Elguja, cursive' : 'SymphonyPro, cursive' }}
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
