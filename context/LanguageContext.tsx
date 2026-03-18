@@ -47,14 +47,8 @@ const translations: Record<Language, Record<string, string>> = {
 }
 
 const images: Record<Language, Record<string, string>> = {
-  ka: {
-    'heart': '/assets/images/heart.png',
-    'invite': '/assets/images/qartuli.png',
-  },
-  en: {
-    'heart': '/assets/images/heart.png',
-    'invite': '/assets/images/png invite.png',
-  },
+  ka: {},
+  en: {},
 }
 
 const LanguageContext = createContext<LanguageContextType>({
