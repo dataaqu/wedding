@@ -12,7 +12,7 @@ export default function InvitePage() {
       <div className="flex flex-col items-center w-full max-w-[700px] mt-8">
 
         {/* Hero section - floral frame with couple illustration and text */}
-        <div className="relative w-[85vw] max-w-[700px]">
+        <div className="relative w-[120vw] md:w-[85vw] max-w-[700px]">
           {/* Floral frame */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -52,22 +52,22 @@ export default function InvitePage() {
               transition={{ duration: 0.8, delay: 1.8, ease: 'easeOut' }}
             >
               <p
-                className="text-[5.5vw] md:text-5xl mt-1"
+                className="text-[2.5vw] md:text-sm tracking-[0.15em] uppercase mb-2"
+                style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 300 }}
+              >
+                {t('invite.joinUs')}
+              </p>
+              <p
+                className="text-[8vw] md:text-5xl mt-4"
                 style={{ fontFamily: lang === 'ka' ? 'Elguja, cursive' : 'SymphonyPro, cursive' }}
               >
                 {lang === 'ka' ? 'barbare da levani' : 'Barbare & Levan'}
               </p>
               <p
-                className="text-[2.5vw] md:text-sm tracking-[0.15em] mt-2"
+                className="text-[2.8vw] md:text-sm tracking-[0.15em] mt-2"
                 style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 300 }}
               >
                 26.04.2026
-              </p>
-              <p
-                className="text-[2vw] md:text-xs tracking-[0.15em] uppercase mt-1"
-                style={{ fontFamily: lang === 'ka' ? 'FiraGO, sans-serif' : 'Montserrat, sans-serif', fontWeight: 300 }}
-              >
-                LISI EVENT HALL
               </p>
             </motion.div>
           </div>
