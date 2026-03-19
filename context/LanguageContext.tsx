@@ -32,7 +32,7 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     'landing.subtitle': 'We warmly invite you to share in our happiness',
     'landing.mailFrom': 'You have mail from',
-    'landing.names': 'Babi & Levan',
+    'landing.names': 'Babi & Levani',
     'landing.clickEnvelope': 'Click envelope to open',
     'landing.hopeJoin': 'We hope you can join us',
     'invite.joinUs': 'JOIN US FOR THE WEDDING OF',
