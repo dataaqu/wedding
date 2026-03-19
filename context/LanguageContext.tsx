@@ -39,7 +39,7 @@ const translations: Record<Language, Record<string, string>> = {
     'invite.timeline': 'Our wedding timeline',
     'invite.church': 'Church wedding ceremony',
     'invite.churchDetails': '15:00 / SVETITSKHOVELI CATHEDRAL. MTSKHETA.',
-    'invite.signing': 'WEDDING SINGING CEREMONY',
+    'invite.signing': 'WEDDING SIGNING CEREMONY',
     'invite.signingDetails': '17:00 / LISI EVENT HALL',
     'invite.dinner': 'WEDDING RECEPTION DINNER',
     'invite.dinnerDetails': '18:00 / LISI EVENT HALL',
