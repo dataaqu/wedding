@@ -4,13 +4,13 @@ import { LanguageProvider } from '@/context/LanguageContext'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 export const metadata: Metadata = {
-  title: 'Barbare & Levan ',
+  title: 'Babi & Levan ',
   description: 'We are getting married! Join us to celebrate our special day.',
   icons: {
     icon: '/assets/fav.png',
   },
   openGraph: {
-    title: 'Barbare & Levan',
+    title: 'Babi & Levan',
     description: 'We are getting married! Join us to celebrate our special day.',
     images: [
       {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Barbare & Levan',
+    title: 'Babi & Levan',
     description: 'We are getting married! Join us to celebrate our special day.',
     images: ['/assets/images/first.png'],
   },

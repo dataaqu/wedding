@@ -15,7 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
   ka: {
     'landing.subtitle': 'გეპატიჟებით ჩვენი ბედნიერების გასაზიარებლად',
     'landing.mailFrom': 'თქვენთვის განსაკუთრებული წერილია',
-    'landing.names': 'barbaresa da levanisgan',
+    'landing.names': 'babis da levanisgan',
     'landing.clickEnvelope': 'გასახსნელად დააჭირეთ კონვერტს',
     'landing.hopeJoin': 'ვიმედოვნებთ, რომ ჩვენს განსაკუთრებულ დღეს შემოგვიერთდებით',
     'invite.joinUs': 'გვეწვიეთ ჩვენს ქორწილში',
@@ -27,12 +27,12 @@ const translations: Record<Language, Record<string, string>> = {
     'invite.dinner': 'საზეიმო ვახშამი',
     'invite.dinnerDetails': '18:00 / Lisi Event Hall',
     'invite.honored': 'ჩვენთვის დიდი პატივია, თუ შეძლებთ ჩვენს განსაკუთრებულ დღეს ჩვენთან ყოფნას. სიყვარულით',
-    'invite.names': 'barbare da levani',
+    'invite.names': 'babi da levani',
   },
   en: {
     'landing.subtitle': 'We warmly invite you to share in our happiness',
     'landing.mailFrom': 'You have mail from',
-    'landing.names': 'Barbare & Levan',
+    'landing.names': 'Babi & Levan',
     'landing.clickEnvelope': 'Click envelope to open',
     'landing.hopeJoin': 'We hope you can join us',
     'invite.joinUs': 'JOIN US FOR THE WEDDING OF',
@@ -44,7 +44,7 @@ const translations: Record<Language, Record<string, string>> = {
     'invite.dinner': 'WEDDING RECEPTION DINNER',
     'invite.dinnerDetails': '18:00 / LISI EVENT HALL',
     'invite.honored': 'We would be honored by your presence on our special day.',
-    'invite.names': 'Barbare & Levani',
+    'invite.names': 'Babi & Levani',
   },
 }
 
