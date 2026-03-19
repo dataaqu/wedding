@@ -61,7 +61,7 @@ export default function InvitePage() {
                 className="text-[8vw] md:text-5xl mt-4"
                 style={{ fontFamily: lang === 'ka' ? 'Elguja, cursive' : 'SymphonyPro, cursive' }}
               >
-                {lang === 'ka' ? 'barbare da levani' : 'Barbare & Levan'}
+                {lang === 'ka' ? 'babi da levani' : 'Babi & Levan'}
               </p>
               <p
                 className="text-[2.8vw] md:text-sm tracking-[0.15em] mt-2"
